@@ -81,6 +81,80 @@ Response:
 
 ---
 
+## Postman Testing Guide
+
+### 1. Health Check
+- **Method:** `GET`
+- **URL:** `http://localhost:3000/health` (or your Vercel URL)
+- **Body:** None
+
+### 2. Fibonacci
+- **Method:** `POST`
+- **URL:** `http://localhost:3000/bfhl`
+- **Body (JSON):**
+  ```json
+  { "fibonacci": 7 }
+  ```
+- **Expected:** `[0, 1, 1, 2, 3, 5, 8]`
+
+### 3. Prime Numbers
+- **Method:** `POST`
+- **Body (JSON):**
+  ```json
+  { "prime": [2, 4, 7, 9, 11] }
+  ```
+- **Expected:** `[2, 7, 11]`
+
+### 4. LCM
+- **Method:** `POST`
+- **Body (JSON):**
+  ```json
+  { "lcm": [12, 18, 24] }
+  ```
+- **Expected:** `72`
+
+### 5. HCF
+- **Method:** `POST`
+- **Body (JSON):**
+  ```json
+  { "hcf": [24, 36, 60] }
+  ```
+- **Expected:** `12`
+
+### 6. AI Question
+- **Method:** `POST`
+- **Body (JSON):**
+  ```json
+  { "AI": "What is the capital city of Maharashtra?" }
+  ```
+- **Expected:** `"Mumbai"`
+
+### 7. Error: Multiple Keys
+- **Method:** `POST`
+- **Body (JSON):**
+  ```json
+  { "fibonacci": 7, "prime": [2] }
+  ```
+- **Expected:** `400 Bad Request` + `"message": "Request body must contain exactly one key"`
+
+### 8. Error: Invalid Key
+- **Method:** `POST`
+- **Body (JSON):**
+  ```json
+  { "unknown": 10 }
+  ```
+- **Expected:** `400 Bad Request` + `"message": "Invalid key 'unknown'..."`
+
+### 9. Error: Invalid Type
+- **Method:** `POST`
+- **Body (JSON):**
+  ```json
+  { "fibonacci": "abc" }
+  ```
+- **Expected:** `400 Bad Request` + `"message": "fibonacci value must be a positive integer"`
+
+---
+
 ## Project Structure
 
 ```
