@@ -9,8 +9,8 @@
 
 | Method | Endpoint | URL |
 |--------|----------|-----|
-| POST | `/bfhl` | https://paper-mu-three.vercel.app/bfhl |
-| GET | `/health` | https://paper-mu-three.vercel.app/health |
+| POST | `/bfhl` | https://paper-pi-two.vercel.app/bfhl |
+| GET | `/health` | https://paper-pi-two.vercel.app/health |
 
 ---
 
