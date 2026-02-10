@@ -27,8 +27,8 @@
 
 1. Clone the repo:
    ```bash
-   git clone https://github.com/naman-kumar1212/Paper.git
-   cd Paper
+   git clone https://github.com/naman-kumar1212/NamanKumar-2310991910.git
+   cd NamanKumar-2310991910
    ```
 
 2. Install dependencies:
